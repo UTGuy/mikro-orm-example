@@ -8,5 +8,8 @@ $ yarn create-schema
 $ yarn start:debug
 ```
 
-## Navigate to "localhost:8888/dosomething"
+## Navigate to 
+```bash
+localhost:8888/dosomething
+```
 The error will show
