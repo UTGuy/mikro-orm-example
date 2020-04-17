@@ -1,5 +1,8 @@
 import { MikroORM } from 'mikro-orm';
 import { config } from './modules/orm.config';
+import { FooEntity } from './foo.entity';
+import { BarEntity } from './bar.entity';
+import { BazEntity } from './baz.entity';
 
 (async () => {
   console.log(config);

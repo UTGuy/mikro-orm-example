@@ -1,16 +1,26 @@
 import * as uuid from "uuid";
-import { AnyEntity, PrimaryKey, Property, Entity } from "mikro-orm";
+import { AnyEntity, PrimaryKey, Entity, OneToMany, Collection, OneToOne } from "mikro-orm";
+import { BarEntity } from "./bar.entity";
+import { BazEntity } from "./baz.entity";
 
 @Entity()
 export class FooEntity implements AnyEntity<FooEntity, "id"> {
-    constructor(value: string) {
+    constructor(baz: BazEntity) {
         this.id = uuid.v4();
-        this.value = value;
+        this.baz = baz;
+        this.bars = new Collection<BarEntity>(this, []);
     }
 
     @PrimaryKey()
-    readonly id: string;
+    public id: string;
 
-    @Property()
-    public value: string;
+    @OneToOne(() => BazEntity)
+    public baz: BazEntity;
+
+    @OneToMany(() => BarEntity, bar => bar.foo)
+    public bars: Collection<BarEntity>;
+
+    public setBars(bars: BarEntity[]) {
+        this.bars = new Collection(this, bars);
+    }
 }

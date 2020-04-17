@@ -8,7 +8,7 @@ export class AppController {
 
   @Get("doSomething")
   async doSomething() {
-    const command = new DoSomethingCommand("bar");
+    const command = new DoSomethingCommand("baz");
     const result = await this.commandBus.execute(command);
     return result;
   }

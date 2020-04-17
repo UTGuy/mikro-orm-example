@@ -1,6 +1,7 @@
 import { ICommandHandler, CommandHandler } from "@nestjs/cqrs";
 import { EntityManager } from "mikro-orm";
 import { FooEntity } from "./foo.entity";
+import { BazEntity } from "./baz.entity";
 
 export class DoSomethingCommand {
     constructor(public readonly value: string) {
@@ -12,11 +13,12 @@ export class DoSomethingCommandHandler implements ICommandHandler<DoSomethingCom
     constructor(private readonly em: EntityManager) {
     }
 
-    async execute(command: DoSomethingCommand): Promise<FooEntity> {
-        const repo = this.em.getRepository(FooEntity);
-        const foo = new FooEntity(command.value);
-        repo.persist(foo);
-        return foo;
+    async execute(command: DoSomethingCommand): Promise<void> {
+        const bazRepo = this.em.getRepository(BazEntity);
+        const baz = await bazRepo.findOne(command.value, ["foo"]);
+        const fooRepo = this.em.getRepository(FooEntity);
+        const foo = await fooRepo.findOne(baz.foo.id);
+        fooRepo.remove(foo);
     }
 
 }

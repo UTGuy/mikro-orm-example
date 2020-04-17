@@ -4387,10 +4387,10 @@ kleur@^3.0.3:
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
   integrity sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==
 
-knex@^0.20.11:
-  version "0.20.12"
-  resolved "https://registry.yarnpkg.com/knex/-/knex-0.20.12.tgz#33e576fb53b624c6cf346f7a4c81f0a1e06191fc"
-  integrity sha512-pxJBsfW9EGfc1l5ObD5+91/gveDXZZrx35kW+2tihJYpsAqUoqAnUT2v0xBQrWTDlt3Tifg9Gt84P/0abomPrA==
+knex@^0.20.13:
+  version "0.20.15"
+  resolved "https://registry.yarnpkg.com/knex/-/knex-0.20.15.tgz#b7e9e1efd9cf35d214440d9439ed21153574679d"
+  integrity sha512-WHmvgfQfxA5v8pyb9zbskxCS1L1WmYgUbwBhHojlkmdouUOazvroUWlCr6KIKMQ8anXZh1NXOOtIUMnxENZG5Q==
   dependencies:
     colorette "1.1.0"
     commander "^4.1.1"
@@ -4695,10 +4695,10 @@ micromatch@^4.0.0, micromatch@^4.0.2:
     braces "^3.0.1"
     picomatch "^2.0.5"
 
-mikro-orm@^3.4.1:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/mikro-orm/-/mikro-orm-3.4.1.tgz#40a96919fbabdb06672e41ee9429299193e39c7a"
-  integrity sha512-1ZQNJJJ7VXQMUu45C8K1Oql/404ytS+L10a9f65a562wSy/UbrhohVZ/6A6rwKLAb7U+BwLhCtgepCRIFVOdSA==
+mikro-orm@^3.6.6:
+  version "3.6.7"
+  resolved "https://registry.yarnpkg.com/mikro-orm/-/mikro-orm-3.6.7.tgz#c86e0f5558b7695bbe0cca261900d147589d33ef"
+  integrity sha512-k0NVA1PHDXrBs/xFnb8ft/BUoLD7EFUrQVNw8cL1YRkD0832+g9tk852h0d5CtDDbgCa0N0o3zt7vzzUMzCeHA==
   dependencies:
     acorn-loose "^7.0.0"
     acorn-walk "^7.1.1"
@@ -4709,7 +4709,7 @@ mikro-orm@^3.4.1:
     fast-deep-equal "^3.1.1"
     fs-extra "^8.1.0"
     globby "^10.0.0"
-    knex "^0.20.11"
+    knex "^0.20.13"
     reflect-metadata "^0.1.13"
     ts-morph "^4.3.3"
     umzug "^2.2.0"
@@ -4918,7 +4918,7 @@ neo-async@^2.5.0, neo-async@^2.6.1:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
 
-nestjs-mikro-orm@^1.0.2:
+nestjs-mikro-orm@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/nestjs-mikro-orm/-/nestjs-mikro-orm-1.0.3.tgz#835c1e598dcd717c56c61d13c38e2c78185b7e68"
   integrity sha512-/yJ6uxFqpy9yHgx7WiIxy2ro/9vC0819iQOcb/lc+3QYoOhhLTJ1Whhq9qdsDAYmAt3CyjgaKxplsn5TRm2B3w==
