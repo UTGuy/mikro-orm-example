@@ -1,6 +1,11 @@
-## Create the database
+## Create the schema
 ```bash
 $ yarn create-schema
+```
+
+## Create the data
+```bash
+$ yarn create-data
 ```
 
 ## Running the app in debug
@@ -12,4 +17,9 @@ $ yarn start:debug
 ```bash
 localhost:8888/dosomething
 ```
-The error will show
+The error will show in the terminal
+
+## The test case will pass just fine
+```bash
+$ yarn test
+```
